@@ -1,0 +1,20 @@
+@media only screen and (max-width: 800px) {
+  .search_select {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  .central-block {
+    width: 100%;
+    max-width: none;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .forecast .result_comings_day {
+    &,
+    &:last-child {
+      margin: auto;
+    }
+  }
+}

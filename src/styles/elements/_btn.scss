@@ -1,0 +1,20 @@
+.btn {
+  height: 40px;
+  line-height: 40px;
+  transition: all .15s ease-in-out;
+  border: none;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  color: #FFF;
+  text-transform: uppercase;
+  cursor: pointer;
+  &--disabled {
+    cursor: default;
+  }
+  &--yellow {
+    background-color: $yellow;
+    &:not(.btn--yellow--disabled):hover {
+      background-color: $hover-yellow;
+    }
+  }
+}

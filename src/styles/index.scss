@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap');
+@import url('https://use.fontawesome.com/releases/v5.8.2/css/all.css');
+
+@import "normalize.css";
+@import "fonts";
+@import "variables/colors";
+@import "mixins/mixins";
+@import "base";
+
+.forecast {
+  @import "elements/icon";
+  @import "elements/spinner";
+  @import "elements/inputs";
+  @import "elements/btn";
+  @import "components/content";
+  @import "components/result";
+  @import "components/search";
+}
+
+@import "media/phones";

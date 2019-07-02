@@ -1,0 +1,17 @@
+html {
+  font-size: 14px;
+}
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Oswald, sans-serif;
+  background-color: $blue;
+}
+
+.central-block {
+  width: 55%;
+  max-width: 55rem;
+  padding: 1rem 1rem 2rem;
+}

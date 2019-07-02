@@ -1,0 +1,86 @@
+.result {
+  @include flexbox();
+  @include justify-content(center);
+  &_body {
+    @extend .central-block;
+    @include flexbox();
+    @include flex-direction(column);
+    @include align-items(center);
+  }
+  &_today {
+    width: 33%;
+    margin-bottom: 15px;
+  }
+  &_info {
+    display: block;
+    text-align: center;
+    margin: 0 0 10px;
+    &--text {
+      font-family: 'Source Sans Pro', sans-serif;
+      text-transform: uppercase;
+    }
+  }
+  &_comings {
+    @include flexbox();
+    @include justify-content(space-between);
+    @include flex-wrap(wrap);
+    width: 100%;
+    background-color: rgba($text-grey, .5);
+    padding: 30px 15px 0;
+    &_day {
+      margin-right: 20px;
+      margin-bottom: 30px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  &_conditions {
+    @include flexbox();
+    @include justify-content(center);
+  }
+  &_date {
+    text-align: center;
+    margin: 0 0 10px;
+  }
+  &_icon {
+    margin: 0 10px 0 0;
+  }
+  &_temp {
+    @include flexbox();
+    &_value {
+      @include align-self(flex-end);
+      margin: 0;
+      &--average {
+        @include align-self(center);
+        @include justify-content(flex-end);
+      }
+      &--today {
+        font-size: 2.5rem;
+      }
+      &--min,
+      &--max {
+        &:before {
+          font-size: 0.6em;
+          padding-right: 2px;
+        }
+      }
+      &--min {
+        &:before {
+          content: 'min';
+        }
+      }
+      &--max {
+        &:before {
+          content: 'max';
+        }
+      }
+    }
+    &_extra {
+      @include flexbox();
+      @include flex-direction(column);
+      @include justify-content(space-between);
+      font-size: .8rem;
+    }
+  }
+}
