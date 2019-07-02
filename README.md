@@ -27,7 +27,7 @@ To get `YOUR_API_KEY` follow the guide [https://openweathermap.org/guide](https:
 ### `npm start`
 
 Runs the app in the development mode.<br>
-Open [http://0.0.0.0:80800](http://0.0.0.0:8080) to view it in the browser.
+Open [http://0.0.0.0:8080](http://0.0.0.0:8080) to view it in the browser.
 
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
