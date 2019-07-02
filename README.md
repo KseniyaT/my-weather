@@ -1,8 +1,8 @@
-#MyWeather
+# MyWeather
 
 Check the weather in any city in the world
 
-##Deployment
+## Deployment
 
 Clone the project
 ```
