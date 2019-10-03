@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function SubmitButton(props) {
+const SubmitButton = ({ className, value, isLoading }) => { // eslint-disable-line arrow-body-style
   return (
     <button
-      disabled={!props.value || props.isLoading}
+      disabled={!value || isLoading}
       type="submit"
-      className={`${props.className} btn btn--yellow ${(!props.value || props.isLoading)
+      className={`${className} btn btn--yellow ${(!value || isLoading)
         ? 'btn--disabled btn--yellow--disabled'
         : ''
       }`}
@@ -14,7 +14,7 @@ function SubmitButton(props) {
       {'Search'}
     </button>
   );
-}
+};
 
 SubmitButton.defaultProps = {
   className: '',

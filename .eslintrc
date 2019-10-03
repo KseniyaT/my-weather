@@ -1,7 +1,7 @@
 {
   "parser": "babel-eslint",
   "plugins": [
-    "react"
+    "react", "sonarjs"
   ],
   "env": {
     "browser": true
@@ -17,6 +17,8 @@
   "rules": {
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
+    "sonarjs/cognitive-complexity": "error",
+    "sonarjs/no-identical-expressions": "error",
     "no-console": "off",
     "class-methods-use-this": ["warn"],
     "arrow-body-style": ["error", "as-needed"],
@@ -26,5 +28,5 @@
     "no-trailing-spaces": ["error", { "ignoreComments": true }],
     "max-len": [1, 130, 2, {"ignoreComments": true}]
   },
-  "extends": ["airbnb-base"]
+  "extends": ["airbnb-base", "plugin:sonarjs/recommended"]
 }

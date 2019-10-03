@@ -1,11 +1,11 @@
 .result {
-  @include flexbox();
-  @include justify-content(center);
+  display: flex;
+  justify-content: center;
   &_body {
     @extend .central-block;
-    @include flexbox();
-    @include flex-direction(column);
-    @include align-items(center);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   &_today {
     width: 33%;
@@ -21,9 +21,9 @@
     }
   }
   &_comings {
-    @include flexbox();
-    @include justify-content(space-between);
-    @include flex-wrap(wrap);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     width: 100%;
     background-color: rgba($text-grey, .5);
     padding: 30px 15px 0;
@@ -36,8 +36,8 @@
     }
   }
   &_conditions {
-    @include flexbox();
-    @include justify-content(center);
+    display: flex;
+    justify-content: center;
   }
   &_date {
     text-align: center;
@@ -47,13 +47,13 @@
     margin: 0 10px 0 0;
   }
   &_temp {
-    @include flexbox();
+    display: flex;
     &_value {
-      @include align-self(flex-end);
+      align-self: flex-end;
       margin: 0;
       &--average {
-        @include align-self(center);
-        @include justify-content(flex-end);
+        align-self: center;
+        justify-content: flex-end;
       }
       &--today {
         font-size: 2.5rem;
@@ -77,9 +77,9 @@
       }
     }
     &_extra {
-      @include flexbox();
-      @include flex-direction(column);
-      @include justify-content(space-between);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       font-size: .8rem;
     }
   }

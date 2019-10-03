@@ -7,7 +7,7 @@ import icons from './helpers/icons';
 const { getFormatedDate, getFormatedTemperature } = formater;
 const { getIconInfo } = icons;
 
-function Forecast(props) {
+const Forecast = (props) => { // eslint-disable-line arrow-body-style
   return (
     <div className="result_body">
       <div className="result_today">
@@ -41,7 +41,7 @@ function Forecast(props) {
       </div>
     </div>
   );
-}
+};
 
 Forecast.defaultProps = {
   cityName: '',

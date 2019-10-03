@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function ForecastMainInfo(props) {
+const ForecastMainInfo = (props) => { // eslint-disable-line arrow-body-style
   return (
     <div className="result_conditions">
       <p className={`result_icon icon icon--${props.iconName}`} />
@@ -16,7 +16,7 @@ function ForecastMainInfo(props) {
       </div>
     </div>
   );
-}
+};
 
 ForecastMainInfo.defaultProps = {
   iconName: 'sunny',

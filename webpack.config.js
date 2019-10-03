@@ -18,15 +18,28 @@ module.exports = {
       },
       {
         test: [/\.css$/, /\.scss$/],
+        exclude: /node_modules/,
         use: [
           "style-loader",
           {
             loader: "css-loader",
             options: {
-              importLoaders: 2, // 0 => no loaders (default); 1 => postcss-loader; 2 => postcss-loader, sass-loader
+              sourceMap: true,
             },
           },
-          "sass-loader",
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: true,
+              config: {
+                path: 'postcss.config.js'
+              }
+            }
+          },
+          {
+            loader: "sass-loader",
+            options: { sourceMap: true }
+          },
         ],
       },
 
@@ -79,6 +92,6 @@ module.exports = {
       REACT_APP_API_KEY,
       REACT_APP_ENDPOINT,
       REACT_APP_FORECAST_5,
-    })
+    }),
   ]
 };
